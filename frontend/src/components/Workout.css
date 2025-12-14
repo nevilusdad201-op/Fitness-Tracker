@@ -1,0 +1,925 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0F0E0E, #541212);
+  color: #EEEEEE;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Intro Section */
+.fitness-intro {
+  max-width: 900px;
+  margin: 60px auto 40px;
+  text-align: center;
+  padding: 50px 30px;
+  background: rgba(70, 138, 154, 0.15);
+  color: #EEEEEE;
+  border-radius: 25px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 1s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fitness-intro:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 50px rgba(70, 138, 154, 0.6);
+}
+
+.fitness-intro h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  color: #468A9A;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
+.fitness-intro p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* Available Workouts Title */
+.available-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 50px 0 25px;
+  color: #EEEEEE;
+  letter-spacing: 1px;
+}
+
+/* Workout Grid */
+.workout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+/* Workout Cards */
+.workout-card {
+  background: rgba(84, 18, 18, 0.15);
+  border: 2px solid rgba(70, 138, 154, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.workout-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(84, 18, 18, 0.6);
+}
+
+.workout-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #EEEEEE;
+}
+
+.workout-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Workout Image */
+.workout-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+/* Add Button */
+.add-btn {
+  background: linear-gradient(135deg, #468A9A, #541212);
+  border: none;
+  color: #EEEEEE;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background: linear-gradient(135deg, #541212, #468A9A);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(70, 138, 154, 0.5);
+}
+
+/* Workout Plan Table */
+.workout-plan {
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(15, 14, 14, 0.5);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.workout-plan h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #468A9A;
+}
+
+.workout-plan table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.workout-plan table th,
+.workout-plan table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.2);
+}
+
+.workout-plan table tr:hover {
+  background: rgba(70, 138, 154, 0.1);
+}
+
+/* Reset Button */
+.submitPlanBtn {
+  display: block;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #541212, #468A9A);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 15px;
+  font-weight: 600;
+  color: #EEEEEE;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitPlanBtn:hover {
+  background: linear-gradient(135deg, #468A9A, #541212);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(70, 138, 154, 0.6);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Workout.css */
+#workouts {
+  padding: 60px 10%;
+  background: #0F0E0E;
+  color: #EEEEEE;
+  font-family: "Poppins", sans-serif;
+}
+
+.fitness-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.fitness-intro h1 {
+  font-size: 2.5rem;
+  color: #EEEEEE;
+}
+.fitness-intro p {
+  max-width: 700px;
+  margin: 10px auto;
+  color: #AAAAAA;
+  font-size: 1.1rem;
+}
+
+.available-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #468A9A;
+}
+
+.workout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.workout-card {
+  background: #541212;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.workout-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.workout-card img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.add-btn {
+  background: #468A9A;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: #EEEEEE;
+  font-weight: bold;
+  cursor: pointer;
+}
+.add-btn:hover {
+  background: #366c7b;
+}
+
+.workout-plan {
+  margin-top: 60px;
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 20px;
+}
+.workout-plan table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.workout-plan th, .workout-plan td {
+  border-bottom: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+.remove-btn {
+  background: #ff4d4d;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.reset-btn {
+  background: #468A9A;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: #EEEEEE;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* -------- Workout Plan Section (with Gradient) -------- */
+.plan-container {
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #0F0E0E, #1a1a1a, #0F0E0E);
+  color: #EEEEEE;
+  font-family: "Poppins", sans-serif;
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.plan-header h1 {
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #541212, #468A9A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+.plan-header p {
+  font-size: 1.2rem;
+  color: #AAAAAA;
+  max-width: 700px;
+  margin: auto;
+}
+
+.plan-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.plan-btn {
+  background: linear-gradient(135deg, #541212, #8B0000);
+  border: 2px solid #468A9A;
+  color: #EEEEEE;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.plan-btn:hover {
+  background: linear-gradient(135deg, #468A9A, #54BAB9);
+  color: #0F0E0E;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(70,138,154,0.7);
+}
+.plan-btn.active {
+  background: linear-gradient(135deg, #468A9A, #54BAB9);
+  color: #0F0E0E;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(70, 138, 154, 0.7);
+}
+
+.plan-message {
+  text-align: center;
+  color: #AAAAAA;
+  font-size: 1.1rem;
+}
+
+.monthly-plan {
+  margin-top: 20px;
+}
+.monthly-plan h2 {
+  text-align: center;
+  font-size: 2rem;
+  background: linear-gradient(90deg, #541212, #468A9A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: linear-gradient(135deg, #141414, #1e1e1e, #141414);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.monthly-plan table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.monthly-plan th,
+.monthly-plan td {
+  border-bottom: 1px solid #333;
+  padding: 12px 10px;
+  text-align: center;
+}
+.monthly-plan th {
+  background: linear-gradient(135deg, #541212, #700000);
+  color: #EEEEEE;
+}
+.monthly-plan tr:nth-child(even) {
+  background: rgba(70, 138, 154, 0.1);
+}
+.monthly-plan tr:hover {
+  background: rgba(70, 138, 154, 0.25);
+  transition: background 0.3s ease;
+}
+.gif-preview {
+  width: 60px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(70,138,154,0.4);
+}
+.remove-plan-btn {
+  background: linear-gradient(135deg, #541212, #8B0000);
+  color: #EEEEEE;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.remove-plan-btn:hover {
+  background: linear-gradient(135deg, #468A9A, #54BAB9);
+  color: #0F0E0E;
+  transform: scale(1.05);
+}
+/* 🌟 Ultra Premium BMI Calculator Section 🌟 */
+.bmi-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 50px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, rgba(84, 18, 18, 0.85), rgba(15, 14, 14, 0.85));
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  color: #EEEEEE;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.bmi-container:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+}
+
+.bmi-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #EEEEEE;
+  text-shadow: 0 0 15px rgba(70, 138, 154, 0.8);
+  margin-bottom: 15px;
+}
+
+.bmi-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.bmi-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.bmi-inputs input {
+  width: 45%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 15px;
+  border: 2px solid rgba(238, 238, 238, 0.2);
+  background: rgba(238, 238, 238, 0.15);
+  color: #EEEEEE;
+  outline: none;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.bmi-inputs input:focus {
+  border-color: #468A9A;
+  background: rgba(238, 238, 238, 0.25);
+  box-shadow: 0 0 12px #468A9A;
+}
+
+.bmi-container button {
+  background: linear-gradient(90deg, #468A9A, #541212);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.4s, transform 0.2s;
+}
+
+.bmi-container button:hover {
+  background: linear-gradient(90deg, #541212, #468A9A);
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(70, 138, 154, 0.8);
+}
+
+.bmi-result {
+  margin-top: 35px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.bmi-bar-container {
+  width: 100%;
+  height: 28px;
+  background: rgba(238, 238, 238, 0.1);
+  border-radius: 50px;
+  margin-top: 25px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.bmi-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00FF00, #FFFF00, #FFA500, #FF0000);
+  text-align: center;
+  font-weight: bold;
+  color: #0F0E0E;
+  line-height: 28px;
+  transition: width 0.5s ease-in-out;
+  border-radius: 50px;
+}
+
+.bmi-status {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+/* === Global Background (same for all pages) === */
+body {
+  background: linear-gradient(120deg, #0F0E0E, #541212, #468A9A);
+  background-size: 300% 300%;
+  animation: bgMove 15s ease infinite;
+  color: #EEEEEE;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Calorie Counter Section === */
+.calorie-section {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main card container */
+.calorie-container {
+  max-width: 650px;
+  width: 100%;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calorie-container:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.9);
+}
+
+/* Title */
+.calorie-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #eeeeee, #468A9A, #541212);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* Subtitle */
+.calorie-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+/* === Input Section === */
+.calorie-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.calorie-inputs input {
+  width: 220px;
+  padding: 14px 18px;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.calorie-inputs input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #468A9A;
+  box-shadow: 0 0 12px rgba(70, 138, 154, 0.7);
+  transform: scale(1.05);
+}
+
+.calorie-inputs input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+/* Add button */
+.calorie-inputs button {
+  padding: 14px 28px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(135deg, #468A9A, #541212);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.calorie-inputs button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #541212, #468A9A);
+  box-shadow: 0 0 20px rgba(70, 138, 154, 0.7);
+}
+
+/* === Meals List === */
+.meal-list {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.meal-list h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.meal-list ul {
+  list-style: none;
+}
+
+.meal-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  margin-bottom: 12px;
+  padding: 12px 18px;
+  border-radius: 15px;
+  transition: background 0.3s ease;
+}
+
+.meal-list li:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.meal-list li button {
+  background: crimson;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.meal-list li button:hover {
+  transform: scale(1.1);
+  background: darkred;
+}
+
+/* === Summary Section === */
+.calorie-summary {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+.calorie-summary span {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.calorie-advice {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #eeeeee;
+  opacity: 0.9;
+}
+/* === Progress Tracker === */
+.progress-section {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  backdrop-filter: blur(15px);
+}
+
+.progress-title {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #468A9A, #541212);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.progress-subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.progress-graph {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.progress-bar {
+  text-align: center;
+  position: relative;
+}
+
+.progress-fill {
+  width: 40px;
+  background: linear-gradient(180deg, #468A9A, #541212);
+  border-radius: 10px;
+  transition: height 0.5s ease-in-out;
+}
+
+.progress-label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.progress-weight {
+  display: block;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* === Diet Planner === */
+.diet-section {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.diet-container {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 25px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+}
+
+.diet-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #541212, #468A9A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.diet-subtitle {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin: 15px 0 30px;
+}
+
+.diet-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.diet-btn {
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 2px solid #468A9A;
+  background: transparent;
+  color: #eee;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.diet-btn:hover, .diet-btn.active {
+  background: linear-gradient(90deg, #468A9A, #541212);
+  color: #fff;
+}
+
+.diet-generate-btn {
+  margin-top: 20px;
+  padding: 14px 30px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #468A9A, #541212);
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.diet-generate-btn:hover {
+  transform: scale(1.05);
+}
+
+.diet-plan-result {
+  margin-top: 30px;
+  text-align: left;
+  background: rgba(0,0,0,0.3);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.diet-plan-result h2 {
+  color: #468A9A;
+  margin-bottom: 10px;
+}
+
+.diet-plan-result ul {
+  list-style: none;
+  padding: 0;
+}
+
+.diet-plan-result li {
+  margin-bottom: 8px;
+}
+/* === Common Section Styling === */
+.section {
+  padding: 80px 20px;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #EEEEEE;
+  transition: background 0.5s ease-in-out;
+}
+
+/* === Specific Sections === */
+
+/* Workouts Section */
+.workouts-section {
+  background: linear-gradient(135deg, #0F0E0E, #1a1a1a, #0F0E0E);
+}
+
+/* Workout Plan Section */
+.workout-plan-section {
+  background: linear-gradient(135deg, #141414, #0F0E0E, #1e1e1e);
+}
+
+/* BMI Calculator Section */
+.bmi-section {
+  background: linear-gradient(120deg, #0F0E0E, #541212, #468A9A);
+}
+
+/* Calorie Counter Section */
+.calorie-section {
+  background: linear-gradient(120deg, #0F0E0E, #541212, #468A9A);
+}
+
+/* Diet Planner Section */
+.diet-section {
+  background: linear-gradient(135deg, #0F0E0E, #1a1a1a, #541212);
+}
+
+/* Progress Tracker Section */
+.progress-section {
+  background: linear-gradient(135deg, #0F0E0E, #468A9A, #541212);
+}
+
+/* === Optional: Smooth background movement (premium feel) === */
+.section {
+  background-size: 300% 300%;
+  animation: bgMove 15s ease infinite;
+}
+
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

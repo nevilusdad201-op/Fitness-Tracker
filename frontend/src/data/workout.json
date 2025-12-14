@@ -1,0 +1,18 @@
+[
+  { "name": "Push Up", "calories": 100, "time": 5, "image": "/workouts/pushup.gif" },
+  { "name": "Squat", "calories": 120, "time": 7, "image": "/workouts/squat.gif" },
+  { "name": "Plank", "calories": 50, "time": 4, "image": "/workouts/plank.gif" },
+  { "name": "Burpee", "calories": 150, "time": 8, "image": "/workouts/burpee.gif" },
+  { "name": "Crunches", "calories": 80, "time": 5, "image": "/workouts/crunch.gif" },
+  { "name": "Jumping Jacks", "calories": 90, "time": 6, "image": "/workouts/jumping-jack.gif" },
+  { "name": "Lunges", "calories": 110, "time": 7, "image": "/workouts/lunge.gif" },
+  { "name": "Mountain Climber", "calories": 140, "time": 6, "image": "/workouts/mountain-climber.gif" },
+  { "name": "High Knees", "calories": 100, "time": 5, "image": "/workouts/high-knee.gif" },
+  { "name": "Tricep Dips", "calories": 70, "time": 4, "image": "/workouts/tricep-dip.gif" },
+  { "name": "Russian Twist", "calories": 85, "time": 5, "image": "/workouts/russian-twist.gif" },
+  { "name": "Bicep Curl", "calories": 60, "time": 4, "image": "/workouts/bicep-curl.gif" },
+  { "name": "Shoulder Press", "calories": 75, "time": 4, "image": "/workouts/shoulder-press.gif" },
+  { "name": "Deadlift", "calories": 160, "time": 9, "image": "/workouts/deadlift.gif" },
+  { "name": "Leg Raise", "calories": 70, "time": 4, "image": "/workouts/leg-raise.gif" },
+  { "name": "Kettlebell Swing", "calories": 130, "time": 7, "image": "/workouts/kettlebell-swing.gif" }
+]

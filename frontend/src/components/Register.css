@@ -1,0 +1,274 @@
+/* Register.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #0F0E0E, #541212, #468A9A);
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+.register-box {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px) saturate(160%);
+  padding: 60px 50px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  animation: floatIn 0.9s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 70px rgba(70, 138, 154, 0.6);
+}
+
+.register-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #468A9A, #EEEEEE, #541212);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+.register-box h2 {
+  font-size: 1.4rem;
+  color: #EEEEEE;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.register-box input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.register-box input:focus {
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 0 15px rgba(70, 138, 154, 0.6);
+  transform: scale(1.04);
+}
+
+.register-btn {
+  background: linear-gradient(135deg, #468A9A, #541212);
+  border: none;
+  color: #EEEEEE;
+  font-weight: 700;
+  padding: 14px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.register-btn:hover {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 6px 25px rgba(70, 138, 154, 0.9);
+}
+
+.login-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #468A9A;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.login-link:hover {
+  color: #EEEEEE;
+  text-shadow: 0 0 8px rgba(70, 138, 154, 0.8);
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(30px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+/* src/components/Register.css */
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: transparent; /* gradient from App.js will show */
+}
+
+.register-box {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #ffffff;
+}
+
+.register-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #468A9A, #541212);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.register-box input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}
+
+.register-btn {
+  background: linear-gradient(135deg, #468A9A, #541212);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.register-btn:hover {
+  transform: scale(1.05);
+}
+
+.login-link {
+  display: block;
+  margin-top: 10px;
+  color: #ddd;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  color: #468A9A;
+}
+/* Age input field styling */
+.register-box input[type="number"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.12); /* thoda transparent */
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.register-box input[type="number"]:focus {
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 0 10px rgba(70, 138, 154, 0.6);
+  transform: scale(1.03);
+}
+.gender-container {
+  display: flex;
+  gap: 20px;
+  margin: 15px 0;
+  justify-content: center;
+}
+
+.gender-card {
+  position: relative;
+  width: 120px;
+  height: 55px;
+  border-radius: 14px;
+  background: #111;
+  border: 2px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s ease;
+  padding-left: 30px;  /* ⭐ TEXT & ICON OVERLAP FIX */
+}
+
+.gender-card input {
+  display: none;
+}
+
+.gender-title {
+  color: #ddd;
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.gender-card .circle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 15px;         /* ⭐ Circle perfect left me */
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #555;
+  transition: 0.25s ease;
+  z-index: 2;
+}
+
+.gender-card .shine {
+  position: absolute;
+  top: -80%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.15), transparent);
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.gender-card:hover .shine {
+  opacity: 1;
+}
+
+.gender-card.active {
+  border-color: #ff4d4d;
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(255, 77, 77, 0.4);
+}
+
+.gender-card.active .circle {
+  border-color: #ff4d4d;
+  background: #ff4d4d;
+}
+  input[type="email"] {
+  background: #2c2c2c !important;
+  color: #eaeaea !important;
+  border-radius: 10px !important;
+  border: none !important;
+  outline: none !important;
+}
+/* FIX EMAIL BLUE ISSUE */
+.register-box input[type="email"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+}

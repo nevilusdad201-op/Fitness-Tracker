@@ -1,0 +1,99 @@
+/* Glassmorphism Auth Cards */
+.auth-container {
+    max-width: 420px;
+    margin: 100px auto;
+    padding: 50px;
+    background: rgba(15, 14, 14, 0.75);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: #EEEEEE;
+    font-family: "Poppins", sans-serif;
+    animation: fadeInUp 1s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .auth-container:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
+  }
+  
+  .auth-container h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #468A9A, #541212);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+    margin-bottom: 8px;
+  }
+  
+  .auth-container h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #EEEEEE;
+    margin-bottom: 20px;
+  }
+  
+  .auth-container input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 15px;
+    background: rgba(238, 238, 238, 0.15);
+    color: #EEEEEE;
+    font-size: 1rem;
+    outline: none;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .auth-container input:focus {
+    background: rgba(238, 238, 238, 0.25);
+    box-shadow: 0 0 15px rgba(70, 138, 154, 0.7);
+    transform: scale(1.03);
+  }
+  
+  .auth-container button {
+    margin-top: 10px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #468A9A, #541212);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .auth-container button:hover {
+    transform: scale(1.08);
+    background: linear-gradient(90deg, #541212, #468A9A);
+    box-shadow: 0 0 20px rgba(70, 138, 154, 0.7);
+  }
+  
+  .auth-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #468A9A;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .auth-link:hover {
+    text-decoration: underline;
+    color: #54BAB9;
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
